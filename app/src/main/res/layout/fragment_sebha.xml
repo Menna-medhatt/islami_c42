@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_purple"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sebha_background"
     android:layout_height="match_parent"
-    tools:context=".ui.home.tabs.sebha_tab.SebhaFragment">
+    android:fitsSystemWindows="true">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        />
+
+<ImageView
+    android:id="@+id/sebha_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/sebhabody_1"
+    app:layout_constraintTop_toBottomOf="@id/ivLogo"
+    android:layout_marginTop="40dp"
+    />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvzikr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="سبحان الله" />
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvzikr"
+        app:layout_constraintStart_toStartOf="@id/tvzikr"
+        app:layout_constraintEnd_toEndOf="@id/tvzikr"
+        android:textSize="36sp"
+        tools:text="0"
+        android:textColor="@color/white"/>
 
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
